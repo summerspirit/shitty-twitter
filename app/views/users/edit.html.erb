@@ -1,0 +1,10 @@
+<h1> Profile</h1>
+
+<%= form_for @current_user do |f| %>
+
+    <div> Your Name: <%= f.text_field :name %></div>
+    <div>Handle: <%= f.text_field :handle %></div>
+    
+    <%= f.submit "Save Settings" %>
+
+<% end % >

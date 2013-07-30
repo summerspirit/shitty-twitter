@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 
-  before_action :check_user_login
+  #before_action :check_user_login
 
   def index
     @tweets = Tweet.all
@@ -30,7 +30,5 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:content)
   end
 
-  def check_user_login
-    @current_user = User.find(session[:user_id])
-  end
+ 
 end

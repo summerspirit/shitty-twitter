@@ -14,5 +14,7 @@ class LoginController < ApplicationController
   end
 
   def logout
+    reset_session
+    redirect_to login_path
   end
 end
